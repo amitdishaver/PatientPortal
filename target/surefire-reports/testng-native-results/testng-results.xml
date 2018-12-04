@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="653" started-at="2018-11-29T19:03:30Z" finished-at="2018-11-29T19:03:31Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="653" started-at="2018-11-29T19:03:30Z" finished-at="2018-11-29T19:03:31Z">
+      <class name="test.LoginTest">
+        <test-method status="PASS" signature="blankLogin()[pri:0, instance:test.LoginTest@73f792cf]" name="blankLogin" duration-ms="144" started-at="2018-11-29T14:03:30Z" finished-at="2018-11-29T14:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankLogin -->
+        <test-method status="PASS" signature="blankUser()[pri:0, instance:test.LoginTest@73f792cf]" name="blankUser" duration-ms="146" started-at="2018-11-29T14:03:30Z" finished-at="2018-11-29T14:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankUser -->
+        <test-method status="PASS" signature="blankPassword()[pri:0, instance:test.LoginTest@73f792cf]" name="blankPassword" duration-ms="143" started-at="2018-11-29T14:03:30Z" finished-at="2018-11-29T14:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankPassword -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:test.LoginTest@73f792cf]" name="validLogin" duration-ms="211" started-at="2018-11-29T14:03:31Z" finished-at="2018-11-29T14:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+      </class> <!-- test.LoginTest -->
+      <class name="test.BaseTest">
+        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:test.BaseTest@7a5d012c]" name="LaunchBrowser" is-config="true" duration-ms="11894" started-at="2018-11-29T14:03:18Z" finished-at="2018-11-29T14:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+      </class> <!-- test.BaseTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
