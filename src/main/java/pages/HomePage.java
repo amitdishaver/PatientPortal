@@ -1,32 +1,25 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
+	public static By updateInfo		=	By.xpath("//span[contains(text(),'Update your information')]");
+	public static By reqAppointment =	By.xpath("//button[@id='sendApptRequest']");
+	public static By payBill		=	By.xpath("//span[contains(text(),'Pay your bill')]");
+	public static By sendMessage	=	By.id("sendNewButton");
+	public static By loadingIcon	=	By.id("loadingOverlay");
 	
-	public WebDriver driver;
-
-	public HomePage(WebDriver driver) {
-		this.driver=driver;
+	public static void UpdateInfo(){
+		driver.findElement(updateInfo).click();
 	}
-	
-	public static By UpdateInfo		=	By.xpath("//span[contains(text(),'Update your information')]");
-	public static By ReqAppointment =	By.xpath("//button[@id='sendApptRequest']");
-	public static By PayBill		=	By.xpath("//span[contains(text(),'Pay your bill')]");
-	public static By SendMessage	=	By.id("sendNewButton");
-	
-	public void UpdateInfo(){
-		driver.findElement(UpdateInfo).click();
+	public static void ReqAppointment(){
+		driver.findElement(reqAppointment).click();
 	}
-	public void ReqAppointment(){
-		driver.findElement(ReqAppointment).click();
+	public static void PayBill(){
+		driver.findElement(payBill).click();
 	}
-	public void PayBill(){
-		driver.findElement(PayBill).click();
-	}
-	public void SendMessage(){
-		driver.findElement(SendMessage).click();
+	public static void SendMessage(){
+		driver.findElement(sendMessage).click();
 	}
 
 }

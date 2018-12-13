@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.gmed.PatientPortal</groupId>
-  <artifactId>Patient_Portal</artifactId>
+  <groupId>com.patient.portal</groupId>
+  <artifactId>portal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Patient_Portal</name>
+  <name>portal</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -22,11 +22,16 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-       		 <groupId>org.seleniumhq.selenium</groupId>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.11</version>
+</dependency>
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
       		 <artifactId>selenium-java</artifactId>
-       		 <version>3.141.59</version>
+       		 <version>3.11.0</version>
    		 </dependency>
-   		 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+   		 <!-- https://mvnrepository.com/artifact/org.testng/testng  3.141.59 -->
 
 <dependency>
   <groupId>org.testng</groupId>
@@ -47,8 +52,6 @@
     <artifactId>selenium-support</artifactId>
     <version>2.0a7</version>
 </dependency>-->
-
-
-
+    
   </dependencies>
 </project>

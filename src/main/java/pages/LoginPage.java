@@ -1,52 +1,72 @@
 package pages;
 
+import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import utils.ReadExcelSheetData;
+
 
 //import driverFactory.DriverFactory;
 //import utils.inputFileStream;
 
 public class LoginPage extends BasePage{
-	public WebDriver driver;
+//	public static WebDriver driver;
 
-	public LoginPage(WebDriver driver) {
-		this.driver=driver;
-	}
+//	public LoginPage(WebDriver driver) {
+//		this.driver=driver;
+//		PageFactory.initElements(driver, this);
+//	private Map<String, String> myDat;
+//	}
 	 
-	public  By UserName			=	By.id("UserName");
-	public  By Password			=	By.id("Password");
-	public  By SignIn			=	By.xpath("//input[@value='Sign in']");
-	public  By ForgotUserName	=	By.xpath("//a[contains(text(),'Forgot username?')]");
-	public  By ForgotPassword	=	By.xpath("//a[contains(text(),'Forgot password?')]");
-	public  By SignUp			=	By.id("signup");
-	public 	By userValidation 	=	By.xpath("//*[contains(@id,'tooltip')]");
+	public static By userName		=	By.id("UserName");
+	public static By password		=	By.id("Password");
+	public static By signIn			=	By.xpath("//input[@value='Sign in']");
+	public static By forgotUserName	=	By.xpath("//a[contains(text(),'Forgot username?')]");
+	public static By forgotPassword	=	By.xpath("//a[contains(text(),'Forgot password?')]");
+	public static By signUp			=	By.id("signup");
+	public static By userValidation =	By.xpath("//*[contains(@id,'tooltip')]");
 	
 	
-	
-	public void entUserName(){
-		driver.findElement(UserName).sendKeys(config.getProperty("Username"));
+	static ReadExcelSheetData excel = new ReadExcelSheetData();
+	public static void entUserName(){
+
+		try {
+			driver.findElement(userName).sendKeys(excel.getMapData("UserName"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	public void clrUserName(){
-		driver.findElement(UserName).clear();
+	public static void clrUserName(){
+		driver.findElement(userName).clear();
 	}
-	public void entPassword(){
-		driver.findElement(Password).sendKeys(config.getProperty("Password"));
+	public static void entPassword(){
+		try {
+			driver.findElement(password).sendKeys(excel.getMapData("Password"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	public void clrPassword(){
-		driver.findElement(Password).clear();
+	public static void clrPassword(){
+		driver.findElement(password).clear();
 	}
-	public void clkSignIn(){
-		driver.findElement(SignIn).click();
+	public static void clkSignIn(){
+		driver.findElement(signIn).click();
+//		return new HomePage(driver);
 	}
 	public void DoSignUp(){
-		driver.findElement(SignUp).click();
+		driver.findElement(signUp).click();
 	}
 	public void ForgotUserName(){
-		driver.findElement(ForgotUserName).click();
+		driver.findElement(forgotUserName).click();
 	}
 	public void ForgotPassword(){
-		driver.findElement(ForgotPassword).click();
+		driver.findElement(forgotPassword).click();
 	}
 }
